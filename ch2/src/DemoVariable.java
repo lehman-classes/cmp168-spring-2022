@@ -42,12 +42,13 @@ public class DemoVariable {
     // System.out.println("min: " + min);
 
     // overflow
-    int max = Integer.MAX_VALUE;
-    int maxPlus = max + 1;
-    long newMax = (long) max + 1;
+    byte max = Byte.MAX_VALUE;
+    byte one = 1;
+    byte maxPlus = (byte) (max + one);
+    // long newMax = (long) max + 1;
     System.out.println("max: " + max);
-    System.out.println("max: " + maxPlus);
-    System.out.println("max: " + newMax);
+    System.out.println("min: " + maxPlus);
+    // System.out.println("max: " + newMax);
   }
 
   public void calculateDayOfWeek() {
