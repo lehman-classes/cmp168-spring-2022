@@ -6,6 +6,9 @@ public class Dog {
   private boolean isVaccinated;
   private int ageInDogYears;
 
+  public static String TAG = "Alpha";
+  public String TAGx = "Beta";
+
   public Dog() {
   }
 
@@ -51,7 +54,7 @@ public class Dog {
 
   @Override
   public String toString() {
-    return "Dog [ageInDogYears=" + ageInDogYears + ", height=" + height + ", isVaccinated=" + isVaccinated + ", name="
+    return "Dog [ageInDogYears=" + ageInDogYears + ", height=" + height + ",isVaccinated=" + isVaccinated + ", name="
         + name + ", weight=" + weight + "]";
   }
 

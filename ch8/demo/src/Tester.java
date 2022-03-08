@@ -7,6 +7,8 @@ public class Tester {
     Dog dog2 = new Dog();
     Dog dog3 = new Dog();
 
+    System.out.println(Dog.TAG);
+
     // 2. Create 3 separate instances of a Cat using the default constructor.
     Cat cat1 = new Cat();
     Cat cat2 = new Cat();
