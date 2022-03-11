@@ -4,9 +4,10 @@ public class ShowDog extends Dog {
   private String bestFeature = "unknown";
 
   public ShowDog() {
-    super();
+    // super();
     // super.setName("Show Dog Doe");
     setName("Show Dog Doe");
+    // System.out.println("class1: ");
   }
 
   public ShowDog(String name) {
@@ -48,13 +49,14 @@ public class ShowDog extends Dog {
     numTrophies++;
   }
 
-  protected boolean isValid(int val) {
-    return val >= 0;
+  protected boolean isValid() {
+    return numTrophies >= 0;
   }
 
   @Override
   public String toString() {
-    return super.toString() + "\nShowDog [numTrophies=" + numTrophies + ", bestFeature=" + bestFeature + "]";
+    return super.toString() + "\nShowDog [numTrophies=" + numTrophies + ", bestFeature=" +
+        bestFeature + "]";
   }
 
   @Override

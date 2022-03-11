@@ -1,5 +1,9 @@
 public class Dog {
 
+  public static class Bones {
+
+  }
+
   private String name;
   private double weight;
   private double height;
@@ -7,6 +11,7 @@ public class Dog {
   private int ageInDogYears;
 
   public Dog() {
+    // System.out.println("class0: ");
   }
 
   public String getName() {
@@ -51,7 +56,8 @@ public class Dog {
 
   @Override
   public String toString() {
-    return "Dog [ageInDogYears=" + ageInDogYears + ", height=" + height + ",isVaccinated=" + isVaccinated + ", name="
+    return "Dog [ageInDogYears=" + ageInDogYears + ", height=" + height +
+        ",isVaccinated=" + isVaccinated + ", name="
         + name + ", weight=" + weight + "]";
   }
 
