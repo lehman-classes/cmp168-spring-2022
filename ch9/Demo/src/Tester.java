@@ -12,7 +12,8 @@ public class Tester {
     ShowDog showDog4 = new ShowDog();
     ShowDog showDog5 = new ShowDog();
 
-    // Dog dog = new Dog();
+     Dog dog = new Dog();
+     Object obj;
 
     // 2. Set the name of each individual ShowDog object by using the mutator
     // methods from the parent class.

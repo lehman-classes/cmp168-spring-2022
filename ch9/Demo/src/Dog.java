@@ -10,9 +10,9 @@ public class Dog {
   private boolean isVaccinated;
   private int ageInDogYears;
 
-  public Dog() {
-    // System.out.println("class0: ");
-  }
+  // public Dog() {
+  // // System.out.println("class0: ");
+  // }
 
   public String getName() {
     return name;
@@ -52,6 +52,10 @@ public class Dog {
 
   public void setAgeInDogYears(int ageInDogYears) {
     this.ageInDogYears = ageInDogYears;
+  }
+
+  public void doSomething() {
+    System.out.println("doing something");
   }
 
   @Override

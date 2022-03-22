@@ -4,7 +4,7 @@ public class ShowDog extends Dog {
   private String bestFeature = "unknown";
 
   public ShowDog() {
-    // super();
+    //super();
     // super.setName("Show Dog Doe");
     setName("Show Dog Doe");
     // System.out.println("class1: ");
@@ -73,4 +73,8 @@ public class ShowDog extends Dog {
     return false;
   }
 
+  @Override
+  public void doSomething() {
+    System.out.println("something better");
+  }
 }
