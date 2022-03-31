@@ -29,8 +29,27 @@ public class TextFileHandler implements TextFileIOable {
 
   @Override
   public boolean copyFile(String origFileName, String copiedFileName) {
-
-    // implement copyFile here
+    Scanner reader = null;
+    PrintWriter writer = null;
+    try {
+      reader = new Scanner(new File(origFileName));
+      writer = new PrintWriter(new File(copiedFileName));
+      while (reader.hasNext()) {
+        writer.println(reader.nextLine());
+      }
+      return true;
+    } catch (FileNotFoundException fnfe) {
+      System.out.println("file not found.");
+    } catch (Exception e) {
+      System.out.println("something went really bad");
+    } finally {
+      if (reader != null) {
+        reader.close();
+      }
+      if (writer != null) {
+        writer.close();
+      }
+    }
     return false;
   }
 
@@ -69,18 +88,48 @@ public class TextFileHandler implements TextFileIOable {
 
   @Override
   public boolean findAndReplaceContentInFile(String fileName, String originalText, String replacementText) {
-    // TODO Auto-generated method stub
+
+    Scanner reader = null;
+    PrintWriter writer = null;
+    try {
+      reader = new Scanner(new File(fileName));
+      writer = new PrintWriter(new File(fileName));
+      while (reader.hasNext()) {
+        String line = reader.nextLine();
+        if (line.contains(originalText)) {
+          // replace originalText with replacementText here
+          // write new update line back to file
+          // line = "update text";
+        }
+        String hello = "hello world";
+        // replace world for class
+        writer.println(line);
+      }
+      return true;
+    } catch (FileNotFoundException fnfe) {
+      System.out.println("file not found.");
+    } catch (Exception e) {
+      System.out.println("something went really bad");
+    } finally {
+      if (reader != null) {
+        reader.close();
+      }
+      if (writer != null) {
+        writer.close();
+      }
+    }
+
     return false;
   }
 
   @Override
   public String readFile(String fileName) {
-    Scanner scanner = null;
+    Scanner reader = null;
     String content = "";
     try {
-      scanner = new Scanner(new File(fileName));
-      while (scanner.hasNext()) {
-        content += scanner.nextLine() + "\n";
+      reader = new Scanner(new File(fileName));
+      while (reader.hasNext()) {
+        content += reader.nextLine() + "\n";
       }
       return content;
     } catch (FileNotFoundException fnfe) {
@@ -88,8 +137,8 @@ public class TextFileHandler implements TextFileIOable {
     } catch (Exception e) {
       System.out.println("something went really bad");
     } finally {
-      if (scanner != null) {
-        scanner.close();
+      if (reader != null) {
+        reader.close();
       }
     }
     return null;
